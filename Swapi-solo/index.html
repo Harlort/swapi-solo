@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>SWAPI</title>
+    </head>
+    <body>
+        <main id="main">
+            <section class="film-header">
+                <h1>Star Wars</h1>
+                <div id="loading">
+                    <span class="loading"></span>
+                    <p>It's a trap!</p>
+                </div>
+                <div id="film"></div>
+            </section>
+            <section id="film-modal">
+                <div id="film-modal-loader">
+                    <span class="loading"></span>
+                    <p>It's a trap!</p>
+                </div>
+                <div id="film-modal-container">
+                    <div id="times"><span>&times;</span></div>
+                    <div id="film-modal-content"></div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./app.js"></script>
+    </body>
+</html>

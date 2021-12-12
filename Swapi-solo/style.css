@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+/*main*/
+
+.film-header {
+    margin-top: 5rem;
+    text-transform: uppercase;
+}
+
+.film-header h1 {
+    font-size: 2rem;
+    border-bottom: hotpink 0.3rem solid;
+}
+
+.film-release {
+    padding: 1.1rem;
+}
+
+.film-release:hover {
+    color: hotpink;
+    cursor: pointer;
+}
+
+/*modal*/
+
+#film-modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: hotpink;
+    overflow: auto;
+}
+
+#film-modal p {
+    color: white;
+    padding: 0.3rem;
+}
+
+#film-modal-container {
+    height: 50vh;
+    width: 50vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0);
+    border: hotpink 1px solid;
+}
+
+#times {
+    color: hotpink;
+    font-size: 8rem;
+    display: flex;
+    position: fixed;
+    right: 10rem;
+    top: 0;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#times span:hover {
+    transform: scale(1.2);
+}
+
+#film-modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#pop-modal {
+    margin-left: 5rem;
+    text-align: left;
+    overflow: auto;
+    width: 100%;
+}
+
+#pop-modal::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+#pop-modal::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: hotpink;
+}
+
+/*modal loader */
+
+#film-modal-loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#film-modal-loader p,
+#loading p {
+    padding-top: 1rem;
+    color: hotpink;
+}
+
+.loading {
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 1rem solid white;
+    border-top: 1rem solid hotpink;
+    animation: load 2s linear infinite;
+}
+
+#loading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
